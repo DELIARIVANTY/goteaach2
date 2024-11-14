@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+@import url('https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: url('img/login10.img.png') no-repeat center center fixed;
+    background-size: cover;
+    background-color: #ececec; /* Fallback color */
+}
+
+/*------------ Login container ------------*/
+
+.box-area {
+    width: 930px;
+    max-width: 100%;
+    margin: 20px auto;
+    padding: 15px;
+}
+
+/*------------ Right box ------------*/
+
+.right-box {
+    padding: 40px 30px;
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+    border-radius: 20px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); /* Shadow for box */
+}
+
+/* Custom Placeholder */
+::placeholder {
+    font-size: 16px;
+    color: #6c757d; /* Bootstrap muted color */
+}
+
+.rounded-4 {
+    border-radius: 20px !important; /* Override Bootstrap border radius */
+}
+
+.rounded-5 {
+    border-radius: 30px !important;
+}
+
+/* Button Styling */
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Link Styling */
+a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/*------------ Responsive Design for Medium Screens ------------*/
+
+@media (max-width: 768px) {
+    .box-area {
+        width: 100%;
+        margin: 0 10px;
+        padding: 10px;
+    }
+
+    .right-box {
+        padding: 20px;
+    }
+
+    .right-box h2 {
+        font-size: 24px;
+    }
+
+    .btn {
+        font-size: 14px;
+    }
+}
+
+/*------------ Responsive Design for Small Screens (Mobile) ------------*/
+
+@media (max-width: 576px) {
+    .box-area {
+        width: 100%;
+        padding: 5px;
+    }
+
+    .right-box {
+        padding: 15px;
+    }
+
+    .btn {
+        font-size: 12px;
+    }
+
+    .right-box h2 {
+        font-size: 20px;
+    }
+
+    .right-box p {
+        font-size: 14px;
+    }
+
+    .input-group {
+        margin-bottom: 1rem;
+    }
+}
