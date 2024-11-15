@@ -53,7 +53,7 @@ def login_view(request):
     return render(request, 'acc_app/login.html')
 #landingpage view
 def landingpage_view(request):
-    return render(request, 'acc_app/landingpage.html')  # Jika belum login, tampilkan landing page
+    return render(request, 'acc_app/landingpage.html')  
 #classes view
 def classes_view(request):
     return render(request, 'acc_app/classes.html')
