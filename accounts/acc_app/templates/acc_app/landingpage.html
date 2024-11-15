@@ -1,0 +1,196 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Go Teach</title>
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="{% static 'acc_app/css/landingpage.css' %}">
+</head>
+<body>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #005bb5;">
+        <div class="container px-5">
+            <a class="navbar-brand" href="#!">Go Teach</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="btn btn-outline-light" href="{% url 'login' %}">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header with background image -->
+    <header class="bg-dark py-5">
+        <div class="container px-5">
+            <div class="row gx-5 justify-content-center">
+                <div class="col-lg-6">
+                    <div class="text-center my-5">
+                        <h1 class="display-5 fw-bolder text-white mb-2">Introducing Go Teach, a new way to learn</h1>
+                        <p class="lead mb-4" style="color: #ffffff;">
+                            Connect students and teachers around you with our app. Create a responsive and engaging learning experience that makes access easy for all users!
+                        </p>
+                        <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
+                            <a class="btn btn-custom" href="#features">Get Started</a>
+                            <a class="btn btn-outline-light btn-lg px-4" href="#!">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+ <!-- Pricing section -->
+ <section class="bg-light py-5 border-bottom" id="pricing">
+    <div class="container px-5 my-5">
+        <div class="text-center mb-5">
+            <h2 class="fw-bolder">Pay as you Choose</h2>
+            <p class="lead mb-0">With some of the offers we provide</p>
+        </div>
+        <div class="row gx-5 justify-content-center"> <!-- Tambahkan row dan gx-5 untuk memberikan jarak antar kolom -->
+            <!-- Pricing card basic -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body p-5">
+                        <div class="small text-uppercase fw-bold text-muted">Basic</div>
+                        <div class="mb-3">
+                            <span>Rp</span> 
+                            <span class="price fw-bold">150.000</span>
+                            <span class="text-muted">/ mo.</span>
+                        </div>
+                        <ul class="list-unstyled mb-4">
+                            <li class="mb-2"><i class="bi bi-check text-dark"></i> Biaya terjangkau</li>
+                            <li class="mb-2"><i class="bi bi-check text-dark"></i> Pemula dengan anggaran terbatas</li>
+                            <li class="mb-2"><i class="bi bi-check text-dark"></i> Akses ke materi dasar</li>
+                            <li class="mb-2"><i class="bi bi-check text-dark"></i> Materi terbatas</li>
+                            <li class="mb-2"><i class="bi bi-check text-dark"></i> Sangat fleksibel, bisa belajar sendiri</li>
+                            <li class="mb-2 text-muted"><i class="bi bi-x"></i> Sertifikat</li>
+                            <li class="mb-2 text-muted"><i class="bi bi-x"></i> Pembelajaran dengan pemahaman dasar</li>
+                            <li class="mb-2 text-muted"><i class="bi bi-x"></i> Ada tugas dan evaluasi</li>
+                            <li class="text-muted"><i class="bi bi-x"></i> Akses ke beberapa fitur teknologi</li>
+                        </ul>
+                        <div class="d-grid"><a class="btn btn-custom choose-plan" href="#!">Choose plan</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pricing card standard -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body p-5">
+                        <div class="small text-uppercase fw-bold">
+                            <i class="bi bi-star-fill text-warning"></i> Standart
+                        </div>
+                        <div class="mb-3">
+                            <span>Rp</span> 
+                            <span class="price fw-bold">200.000</span>
+                            <span class="text-muted">/ mo.</span>
+                        </div>
+                        <ul class="list-unstyled mb-4">
+                            <li class="mb-2"><i class="bi bi-check text-dark"></i><strong> Biaya masih terjangkau</strong></li>
+                            <li class="mb-2"><i class="bi bi-check text-dark"></i> Akses materi lebih mendalam</li>
+                            <li class="mb-2"><i class="bi bi-check text-dark"></i> Tanya jawab</li>
+                            <li class="mb-2"><i class="bi bi-check text-dark"></i> Sertifikat standar</li>
+                            <li class="mb-2"><i class="bi bi-check text-dark"></i> Fleksibel tapi ada jadwal tugas</li>
+                            <li class="mb-2"><i class="bi bi-check text-dark"></i> Ada tugas dan evaluasi dasar</li>
+                            <li class="mb-2"><i class="bi bi-check text-dark"></i> Pembelajaran dengan pemahaman dasar</li>
+                            <li class="text-muted"><i class="bi bi-x"></i> Teknologi baru dan fitur lanjutan</li>
+                        </ul>
+                        <div class="d-grid"><button class="btn btn-custom choose-plan" href="#!">tombol</button></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pricing card premium -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body p-5">
+                        <div class="small text-uppercase fw-bold text-muted">Premium</div>
+                        <div class="mb-3">
+                            <span>Rp</span> 
+                            <span class="price fw-bold">300.000</span>
+                            <span class="text-muted">/ mo.</span>
+                        </div>
+                        <ul class="list-unstyled mb-4">
+                            <li class="mb-2"><i class="bi bi-check text-dark"></i><strong> Paling mahal, namun sepadan</strong></li>
+                            <li class="mb-2"><i class="bi bi-check text-dark"></i> Materi eksklusif</li>
+                            <li class="mb-2"><i class="bi bi-check text-dark"></i> Konsultasi pribadi</li>
+                            <li class="mb-2"><i class="bi bi-check text-dark"></i> Sertifikat resmi oleh profesional</li>
+                            <li class="mb-2"><i class="bi bi-check text-dark"></i> Diskusi intensif dengan pengajar</li>
+                            <li class="mb-2"><i class="bi bi-check text-dark"></i> Tugas dan evaluasi dasar</li>
+                            <li class="mb-2"><i class="bi bi-check text-dark"></i> Membantu peningkatan karir dan profesionalisme</li>
+                            <li class="mb-2"><i class="bi bi-check text-dark"></i> Teknologi terbaru dan fitur lanjutan</li>
+                        </ul>
+                        <div class="d-grid"><a class="btn btn-custom choose-plan" href="#!">Choose plan</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Testimonials section -->
+    <section class="py-5 border-bottom">
+        <div class="container px-5 my-5 px-5">
+            <div class="text-center mb-5">
+                <h2 class="fw-bolder">Customer testimonials</h2>
+                <p class="lead mb-0">"Our customers love learning here"</p>
+            </div>
+            <div class="testimonials">
+                <div class="col-lg-6">
+                   <!-- Testimonial 1-->
+                   <div class="card mb-4">
+                        <div class="card-body p-4">
+                            <div class="d-flex">
+                                <div class="flex-shrink-0">
+                                    <i class="bi bi-chat-right-quote-fill text-dark fs-1"></i>
+                                </div>
+                                <div class="ms-4">
+                                    <p id="testimonial" class="type-effect mb-1"></p>
+                                    <div class="small text-muted">- Kemala, Lombok</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2-->
+                    <div class="card">
+                        <div class="card-body p-4">
+                            <div class="d-flex">
+                                <div class="flex-shrink-0"><i class="bi bi-chat-right-quote-fill text-dark fs-1"></i></div>
+                                <div class="ms-4">
+                                    <p id="testimonial2" class="mb-1"></p>
+                                    <div class="small text-muted">- Lufi, Banjarnegara</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top btn btn-custom btn-lg"><i class="bi bi-arrow-up-circle"></i></a>
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="{% static 'js/landingpage.js' %}"></script>
+
+</body>
+</html>
