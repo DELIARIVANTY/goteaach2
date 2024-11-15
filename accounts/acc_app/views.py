@@ -5,24 +5,53 @@ from django.contrib import messages
 from django import forms
 from django.contrib.auth.decorators import login_required
 
-
-# Form registrasi
+#forms.register
 class RegisterForm(forms.ModelForm):
-    password = forms.CharField(widget=forms.PasswordInput)
-    confirm_password = forms.CharField(widget=forms.PasswordInput)
-
+    password = forms.CharField(
+        widget=forms.PasswordInput(attrs={
+            'class': 'form-control',
+            'placeholder': 'Enter your password'
+        }),
+        label="Password"
+    )
+    confirm_password = forms.CharField(
+        widget=forms.PasswordInput(attrs={
+            'class': 'form-control',
+            'placeholder': 'Confirm your password'
+        }),
+        label="Confirm Password"
+    )
+#register
     class Meta:
         model = User
         fields = ['username', 'email', 'password']
-
-    # Validasi password
+        labels = {
+            'username': 'Username',
+            'email': 'Email',
+            'password': 'Password'
+        }
+        widgets = {
+            'username': forms.TextInput(attrs={
+                'class': 'form-control',
+                'placeholder': 'Enter your username'
+            }),
+            'email': forms.EmailInput(attrs={
+                'class': 'form-control',
+                'placeholder': 'Enter your email'
+            }),
+            'password': forms.PasswordInput(attrs={
+                'class': 'form-control',
+                'placeholder': 'Enter your password'
+            })
+        }
+#validation
     def clean(self):
         cleaned_data = super().clean()
         password = cleaned_data.get("password")
         confirm_password = cleaned_data.get("confirm_password")
-        if password != confirm_password:
-            self.add_error('confirm_password', "Password tidak sama")
-        return cleaned_data
+
+        if password and confirm_password and password != confirm_password:
+            self.add_error('confirm_password', "Passwords do not match.")
 
 # Register view
 def register_view(request):
