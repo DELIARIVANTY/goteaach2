@@ -1,0 +1,87 @@
+/* Background image for header */
+header {
+    background-image: url("https://rgvisionmagazine.com/wp-content/uploads/2023/11/Screenshot-2023-10-25-at-11.50.15-AM.png");
+    background-size: cover;
+    background-position: center;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+/* Custom styling for the buttons */
+.btn-custom {
+    background-color: #003366;
+    color: white;
+}
+
+.btn-custom:hover {
+    background-color: #002244;
+    color: white;
+}
+
+/* Custom pricing font size */
+.pricing-card span {
+    font-size: 24px;
+}
+
+.pricing-card .price {
+    font-size: 40px;
+}
+
+/* Custom testimonial styling */
+.testimonials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.testimonials p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.testimonials .small {
+    color: #888;
+}
+
+/* Adjust body padding to account for fixed navbar */
+body {
+    padding-top: 10px;
+}
+
+/* Ensure testimonial text wraps properly */
+#testimonial, #testimonial2 {
+    width: 100%;
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+/* Extra padding for the pricing section on smaller screens */
+@media (max-width: 768px) {
+    .pricing-card {
+        margin-bottom: 20px;
+    }
+}
+
+/* Styling for Back to Top button */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: none;
+    z-index: 100;
+    font-size: 24px;
+    color: white;
+    background-color: #005bb5;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.back-to-top:hover {
+    background-color: #003366;
+}

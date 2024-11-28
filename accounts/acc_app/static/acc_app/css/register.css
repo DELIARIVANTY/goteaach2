@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: url('img/login10.img.png') no-repeat center center fixed;
+    background-size: cover;
+    background-color: #ececec; /* Fallback color */
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.box-area {
+    width: 930px;
+    max-width: 100%; /* Max width to ensure it fits small screens */
+    margin: 20px auto; /* Center the container */
+    padding: 15px; /* Add some padding */
+}
+
+.register-box {
+    padding: 40px 30px;
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent background for readability */
+    border-radius: 20px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 28px;
+    color: #103cbe;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.btn-primary {
+    background-color: #103cbe;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0d2f8c;
+}
+
+.form-control {
+    border-radius: 10px;
+    height: calc(2.5rem + 2px);
+    padding: 10px;
+    font-size: 16px;
+}
+
+.rounded-5 {
+    border-radius: 30px;
+}
+
+/* Custom Placeholder */
+::placeholder {
+    font-size: 16px;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .register-box {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 576px) {
+    .register-box {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .btn-primary {
+        font-size: 16px;
+    }
+}

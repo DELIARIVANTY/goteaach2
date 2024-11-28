@@ -18,12 +18,14 @@ from django.contrib import admin
 from django.urls import path, include
 from acc_app.views import login_view  
 from django.shortcuts import redirect# Pastikan impor yang benar
+from acc_app.views import landingpage_view
 
 urlpatterns = [
-    path('', lambda request: redirect('login')),  # Redirect otomatis ke login
+    path('', lambda request: redirect('landingpage')),  # Redirect otomatis ke login
     path('admin/', admin.site.urls),
     path('accounts/', include('acc_app.urls')),  # URL untuk aplikasi akun
-    path('', login_view, name='home'),  # Root URL diarahkan ke login_view
+    path('accounts/', login_view, name='home'),  # Root URL diarahkan ke login_view
+    path('',landingpage_view, name='landing_page'),  # Landing page sebagai URL root
 ]
 
 

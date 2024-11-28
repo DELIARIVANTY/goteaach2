@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,24 +6,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Go-Teach Apps - Teacher Dashboard</title>
-    {% load static %}
+
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{% static 'acc_app/css/dashboard.css' %}">
 </head>
 
-<<body>
+<body>
     <header class="bg-primary text-white p-3">
         <div class="container d-flex justify-content-between align-items-center">
-            <div class="logo">Go-Teach Dashboard</div>
+            <div class="logo">Hello , {{ user.username }}</div>
             <!-- Navigation for larger screens -->
             <nav class="d-none d-md-block">
                 <ul class="nav">
-                    <li class="nav-item"><a href="dashboard.html" class="nav-link text-white active">Home</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link text-white">My Classes</a></li>
-                    <li class="nav-item"><a href="profile.html" class="nav-link text-white">Profile</a></li>
-                    <li class="nav-item"><a href="settings.html" class="nav-link text-white">Settings</a></li>
-                    <li class="nav-item"><a href="signin.html" class="nav-link text-white">Logout</a></li>
+                    <li class="nav-item"><a href="{% url 'dashboard' %}" class="nav-link text-white active">Home</a></li>
+                    <li class="nav-item"><a href="{% url 'classes' %}" class="nav-link text-white">My Classes</a></li>
+                    <li class="nav-item"><a href="{% url 'profile' %}" class="nav-link text-white">Profile</a></li>
+                    <li class="nav-item"><a href="{% url 'settings' %}" class="nav-link text-white">Settings</a></li>
+                    <li class="nav-item"><a href="{% url 'landingpage' %}" class="nav-link text-white">Logout</a></li>
                 </ul>
             </nav>
             <!-- Burger Menu Button for mobile screens -->
@@ -35,11 +36,11 @@
         <!-- Collapsible Navbar for mobile screens -->
         <nav class="collapse navbar-collapse d-md-none" id="navbarNav">
             <ul class="nav flex-column">
-                <li class="nav-item"><a href="dashboard.html" class="nav-link text-white active">Home</a></li>
-                <li class="nav-item"><a href="classes.html" class="nav-link text-white">My Classes</a></li>
-                <li class="nav-item"><a href="profile.html" class="nav-link text-white">Profile</a></li>
-                <li class="nav-item"><a href="settings.html" class="nav-link text-white">Settings</a></li>
-                <li class="nav-item"><a href="signin.html" class="nav-link text-white">Logout</a></li>
+                <li class="nav-item"><a href="{% url 'dashboard' %}" class="nav-link text-white active">Home</a></li>
+                <li class="nav-item"><a href="{% url 'classes' %}" class="nav-link text-white">My Classes</a></li>
+                <li class="nav-item"><a href="{% url 'profile' %}" class="nav-link text-white">Profile</a></li>
+                <li class="nav-item"><a href="{% url 'settings' %}" class="nav-link text-white">Settings</a></li>
+                <li class="nav-item"><a href="{% url 'landingpage' %}" class="nav-link text-white">Logout</a></li>
             </ul>
         </nav>
     </header>
@@ -65,7 +66,7 @@
                 <!-- Upcoming Classes -->
                 <div class="col-lg-4 col-md-6 col-sm-12">
                     <div class="dashboard-item">
-                        <img src="img/book1.png" alt="Upcoming Classes" class="img-fluid">
+                        <img src="{% static 'img/book1.png' %}" alt="Upcoming Classes" class="img-fluid">
                         <h3>Upcoming Classes</h3>
                         <p>You have 3 upcoming classes this week.</p>
                         <a href="#">View Schedule</a>
@@ -75,7 +76,7 @@
                 <!-- Assignments to Review -->
                 <div class="col-lg-4 col-md-6 col-sm-12">
                     <div class="dashboard-item">
-                        <img src="img/book1.png" alt="Assignments to Review" class="img-fluid">
+                        <img src="{% static 'img/book1.png' %}" alt="Assignments to Review" class="img-fluid">
                         <h3>Assignments to Review</h3>
                         <p>You have 5 assignments pending for review.</p>
                         <a href="#">Review Now</a>
@@ -85,7 +86,7 @@
                 <!-- Student Progress -->
                 <div class="col-lg-4 col-md-6 col-sm-12">
                     <div class="dashboard-item">
-                        <img src="img/book1.png" alt="Student Progress" class="img-fluid">
+                        <img src="{% static 'img/book1.png' %}" alt="Student Progress" class="img-fluid">
                         <h3>Student Progress</h3>
                         <p>View the progress of your students across various subjects.</p>
                         <a href="#">View Progress</a>
@@ -95,7 +96,7 @@
                 <!-- Messages -->
                 <div class="col-lg-4 col-md-6 col-sm-12">
                     <div class="dashboard-item">
-                        <img src="img/book1.png" alt="Messages" class="img-fluid">
+                        <img src="{% static 'img/book1.png' %}" alt="Messages" class="img-fluid">
                         <h3>Messages</h3>
                         <p>You have 2 new messages from students.</p>
                         <a href="#">Check Messages</a>
@@ -105,7 +106,7 @@
                 <!-- Resource Library -->
                 <div class="col-lg-4 col-md-6 col-sm-12">
                     <div class="dashboard-item">
-                        <img src="img/book1.png" alt="Resource Library" class="img-fluid">
+                        <img src="{% static 'img/book1.png' %}" alt="Resource Library" class="img-fluid">
                         <h3>Resource Library</h3>
                         <p>Explore various study materials here.</p>
                         <a href="#">View Resources</a>
@@ -115,7 +116,7 @@
                 <!-- Event Calendar -->
                 <div class="col-lg-4 col-md-6 col-sm-12">
                     <div class="dashboard-item">
-                        <img src="img/book1.png" alt="Event Calendar" class="img-fluid">
+                        <img src="{% static 'img/book1.png' %}" alt="Event Calendar" class="img-fluid">
                         <h3>Event Calendar</h3>
                         <p>Review the upcoming key information.</p>
                         <a href="#">View Events</a>
@@ -142,7 +143,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <!-- jQuery CDN -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="js/dashboard.js"></script>
+    <script src="{% static 'js/dashboard.js' %}"></script>
 
 </body>
 

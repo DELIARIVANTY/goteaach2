@@ -1,0 +1,98 @@
+/* File: profile.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styling */
+header {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+header .nav-item .nav-link {
+    font-size: 1rem;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+}
+
+header .nav-item .nav-link:hover {
+    color: #FFD700;
+}
+
+/* Main Content Styling */
+main {
+    padding-top: 30px;
+}
+
+.profile-content h1 {
+    font-size: 2rem;
+    color: #0056b3;
+    font-weight: bold;
+}
+
+.profile-content p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Profile Box Styling */
+.profile-box {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-box form label {
+    font-weight: bold;
+    color: #333;
+}
+
+.profile-box form .form-control {
+    box-shadow: none;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.profile-box form .form-control:focus {
+    border-color: #0056b3;
+    outline: none;
+}
+
+.profile-box form button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.profile-box form button:hover {
+    background-color: #0056b3;
+}
+
+/* Footer Styling */
+footer {
+    margin-top: 30px;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 0;
+}
