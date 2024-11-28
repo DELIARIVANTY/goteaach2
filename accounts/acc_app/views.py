@@ -4,6 +4,8 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from django import forms
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.forms import UserChangeForm
+from django.contrib.auth import login, authenticate
 
 #forms.register
 class RegisterForm(forms.ModelForm):
@@ -75,11 +77,12 @@ def login_view(request):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
-            messages.success(request, 'Login berhasil!')
-            return redirect('dashboard')  # Sesuaikan URL tujuan setelah login
+            messages.success(request, f'Welcome back, {user.username}!')
+            return redirect('dashboard')  # Redirect to dashboard
         else:
-            messages.error(request, 'Username atau password salah')
+            messages.error(request, 'Invalid username or password')
     return render(request, 'acc_app/login.html')
+
 #landingpage view
 def landingpage_view(request):
     return render(request, 'acc_app/landingpage.html')  
@@ -87,8 +90,32 @@ def landingpage_view(request):
 def classes_view(request):
     return render(request, 'acc_app/classes.html')
 #profile view
+from django.contrib.auth import logout
+
+@login_required
 def profile_view(request):
-    return render(request, 'acc_app/profile.html')
+    if request.method == 'POST':
+        form = UserChangeForm(request.POST, instance=request.user)
+        if form.is_valid():
+            old_username = request.user.username  # Simpan username lama
+            user = form.save()
+
+            # Perbarui sesi login dengan username baru jika berubah
+            if old_username != user.username:
+                login(request, user)  # Otomatis refresh sesi pengguna
+                messages.success(request, 'Username updated. Session refreshed.')
+
+            messages.success(request, 'Profile updated successfully!')
+            return redirect('profile')
+    else:
+        form = UserChangeForm(instance=request.user)
+
+    return render(request, 'acc_app/profile.html', {
+        'form': form,
+        'username': request.user.username,
+    })
+
+
 #settings view
 def settings_view(request):
     return render(request, 'acc_app/settings.html')

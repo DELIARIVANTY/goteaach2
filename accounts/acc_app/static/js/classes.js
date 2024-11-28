@@ -53,6 +53,20 @@ document.addEventListener("DOMContentLoaded", function () {
   // Perbarui waktu setiap 1 menit
   setInterval(updateTime, 60000);
   updateTime(); // Memanggil fungsi saat halaman dimuat
+
+  // Search jobs by title
+  $("#jobSearch").on("keyup", function () {
+    var searchText = $(this).val().toLowerCase();
+
+    $(".job-card").each(function () {
+      var jobTitle = $(this).find(".card-title").text().toLowerCase();
+      if (jobTitle.includes(searchText)) {
+        $(this).show();
+      } else {
+        $(this).hide();
+      }
+    });
+  });
 });
 
 // CSS tambahan untuk efek animasi dan hover
@@ -73,4 +87,4 @@ document.write(`
         transition: background-color 0.3s ease;
     }
 </style>
-`);
+`); 

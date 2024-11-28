@@ -44,11 +44,11 @@ $(document).ready(function () {
     let greeting;
 
     if (currentHour < 12) {
-        greeting = "Good Morning, Teacher!";
+        greeting = "Good Morning";
     } else if (currentHour < 18) {
-        greeting = "Good Afternoon, Teacher!";
+        greeting = "Good Afternoon";
     } else {
-        greeting = "Good Evening, Teacher!";
+        greeting = "Good Evening";
     }
 
     $('.jumbotron h1').text(greeting);
